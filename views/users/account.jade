@@ -1,0 +1,29 @@
+
+- user = typeof(userDetail) != 'undefined' ? userDetail : { }
+
+#account-form-container.container
+    form(method="post")#account-form.well.span6(style="display: none;")
+        h1
+        .form-group.has-feedback#name-fg
+            label.control-label(for='name-tf')= __("account.form.name")
+            input#name-tf(type='text', name='firstName', value= user.firstName).form-control
+            span.glyphicon.form-control-feedback(aria-hidden='true')#nameVerification
+        .form-group.has-feedback#email-fg
+            label.control-label(for='email-tf')= __("account.form.email")
+            input#email-tf(type='text', name='email', value= user.email).form-control
+            span.glyphicon.form-control-feedback(aria-hidden='true')#emailVerification
+        hr
+        .form-group.has-feedback#username-fg
+            label.control-label(for='user-tf')= __("account.form.username")
+            input#user-tf.disabled(type='text', name='username', value= user.username).form-control
+            span.glyphicon.form-control-feedback(aria-hidden='true')#usernameVerification
+        .form-group.has-feedback#password-fg
+            label.control-label(for='pass-tf')= __("account.form.password")
+            input#pass-tf(type='password', name='password', value='').form-control
+            span.glyphicon.form-control-feedback(aria-hidden='true')#passwordVerification
+        .form-group#buttons-fg
+                button(type='button')#account-form-btn1.btn
+                button(type='submit')#account-form-btn2.btn
+
+script(src='/js/controllers/accountController.js')
+

@@ -1,0 +1,23 @@
+#footer
+    #footer-links
+        ul#footer-links-primary.list-inline
+            li
+              a(href='/aboutMe')= __("footer.aboutme")          
+            li
+              a(href='https://github.com/borjapintos/MyLogin')= __("footer.github")                                    
+            li
+              a(href='/information')= __("footer.information") 
+            li
+              a(href='http://www.gnu.org/licenses/gpl-3.0.en.html')= __("footer.license")                                              
+        ul#footer-links-secondary.list-inline
+            li
+              span= __("footer.language")
+            li
+                select#selectpicker-footer.selectpicker(data-width="auto")
+                    - if (languages)
+                        - each language in languages
+                            option= language
+                                                                                    
+            li
+              span= __("footer.app")
+

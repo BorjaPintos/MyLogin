@@ -1,0 +1,124 @@
+{
+    "test" : "test",
+    "signup" : {
+        "header" : {
+            "title" : "Create account"
+        },
+        "button" : {
+            "signup" : "Create",
+            "cancel" : "Cancel"        
+        } 
+    },
+    "home" : {
+        "header" : {
+            "title" : "Account Details"
+        },
+        "button" : {
+            "delete" : "Delete",
+            "update" : "Update"        
+        } 
+    },
+    "comun" : {
+        "redirecting" : "Redirecting...",
+        "unknown" : "Unknown error :("
+    },
+    "validation" : {
+        "login" : {
+            "wrongUsername" : "Please, enter a valid Username.",
+            "wrongPassword" : "Please, enter a valid Password."
+        },
+        "account" : {
+            "wrongName" : "Name Should Be At Least 3 Characters and short than 255.",
+            "wrongEmail" : "Please enter a valid email, foo@foo.foo and short than 255.",
+            "wrongUsername" : "Username Should Be At Least 3 Characters and short than 255.",
+            "wrongPassword" : "Password Should Be At Least 6 Characters and short than 255."
+        }
+    },
+    "error" : {
+        "code" : {
+            "401" : {
+                "login" : "Username or password wrong",
+                "updateUser" : "Password wrong.",  
+                "deleteUser" : "Password wrong."    
+            },
+            "404" : {
+                "updateUser" : "Usuario not found.",  
+                "deleteUser" : "Usuario not found."    
+            },
+            "407" : {
+                "updateUser" : "You are not loged.",  
+                "deleteUser" : "You are not loged."    
+            },
+            "409" : {
+                "1" : {
+                    "signup" : "Email already taken."
+                },
+                "signup" : "Username already taken.",
+                "updateUser" :  "Email already taken.",
+                "usernameVerification" : "Username already taken.",
+                "emailVerification" : "Email already taken."
+            },
+            "410" : {
+                "updateUser" : "You are not loged.",
+                "deleteUser" :  "You are not loged."
+            },
+            "500" : {
+                "login" : "Unknown error, please contact with admin,thank you for your help.",
+                "signup" : "Unknown error, please contact with admin,thank you for your help.",
+                "updateUser" :  "Unknown error, please contact with admin,thank you for your help."   
+            },
+            "503" : {
+                "login" : "Unknown error, please contact with admin,thank you for your help.",
+                "signup" : "Unknown error, please contact with admin,thank you for your help.",
+                "updateUser" : "Unknown error, please contact with admin,thank you for your help."
+            },
+            "601" : {
+                "updateUser" : "Name Should Be At Least 3 Characters and short than 255.",
+                "signup" : "Name Should Be At Least 3 Characters and short than 255."
+            },
+            "602" : {
+                "updateUser" : "Name Should Be At Least 3 Characters and short than 255.",  
+                "signup" : "Name Should Be At Least 3 Characters and short than 255."    
+            },
+            "603" : {
+                "updateUser" : "Please enter a valid email, foo@foo.foo and short than 255.",  
+                "signup" : "Please enter a valid email, foo@foo.foo and short than 255."
+            },
+            "604" : {
+                "updateUser" : "Please enter a valid email, foo@foo.foo and short than 255.",
+                "signup" : "Please enter a valid email, foo@foo.foo and short than 255."
+            },
+            "605" : {
+                "updateUser" : "Username Should Be At Least 3 Characters and short than 255.",
+                "signup" : "Username Should Be At Least 3 Characters and short than 255."  
+            },
+            "606" : {
+                "updateUser" :"Username Should Be At Least 3 Characters and short than 255.", 
+                "signup" : "Username Should Be At Least 3 Characters and short than 255."   
+            },
+            "607" : {
+                "updateUser" : "Password Should Be At Least 6 Characters and short than 255.",  
+                "signup" : "Password Should Be At Least 6 Characters and short than 255."
+            },
+            "608" : {
+                "updateUser" : "Password Should Be At Least 6 Characters and short than 255.",  
+                "signup" : "Password Should Be At Least 6 Characters and short than 255."  
+            }
+        }
+    },
+    "success" : {
+        "code" : {
+            "200" :{
+                "logout" : "Log out Successfully",
+                "login" : "Log in Successfully",
+                "updateUser" : "User updated Successfully",
+                "deleteUser" : "User deleted Successfully",
+                "usernameVerification" : "Username avaliable",
+                "emailVerification" : "Email avaliable"
+             },
+            "201" :{
+                "signup" : "User created Successfully"
+             }             
+         }    
+    }
+}

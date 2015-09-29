@@ -1,0 +1,18 @@
+- user =  userDetail;
+doctype html
+html
+    head
+    include ./comun/styles
+    
+    body
+        -if (user)
+            include navbar
+        include ./comun/message
+
+    block content
+
+    include footer
+    include ./comun/scripts
+    block scripts
+    
+    

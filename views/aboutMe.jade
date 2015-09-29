@@ -1,0 +1,24 @@
+
+extends layout
+
+block content
+    #aboutMe-container.container 
+        h3= __("aboutme.text.header")
+        h4= __("aboutme.text.part1")
+        h4= __("aboutme.text.part2")
+        h4= __("aboutme.text.part3")
+
+        div.media
+            div.media-right
+                a(href="https://es.linkedin.com/pub/borja-pintos-castro/a9/36a/67a")
+                    img.media-object(src="/img/LinkedIn_logo.png",width="64",height="64")
+            div.media-right
+                a(href="https://twitter.com/wakynian")
+                    img.media-object(src="/img/Twitter_logo.png",width="64",height="64")
+            div.media-right
+                a(href="https://github.com/borjapintos/MyLogin")
+                    img.media-object(src="/img/Git_logo.png",width="64",height="64")
+
+
+block scripts
+    script(src='/js/views/simplePage.js')

@@ -1,0 +1,32 @@
+{
+  "name": "myLogin",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+    "devDependencies": {
+    "sqlite3": "~3.0.4"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.3",
+    "body-parser": "~1.0.0",
+    "connect-flash": "*",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "express": "~4.2.0",
+    "express-session": "~1.0.4",
+    "i18n": "^0.5.0",
+    "i18n-node": "^2.1.3",
+    "i18next-client": "^1.10.2",
+    "jade": "~1.3.0",
+    "mongoose": "^4.0.7",
+    "morgan": "~1.0.0",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "pg": "^4.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.3.2",
+    "serve-favicon": "~2.1.3"
+  }
+}

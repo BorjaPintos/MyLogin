@@ -1,0 +1,11 @@
+
+extends layout
+
+block content
+    #four04-container.container
+        label= __("four04.default.text")
+        div.btm-links
+            a(href='/login')#login= __("four04.goBack")
+
+block scripts
+    script(src='/js/views/simplePage.js')

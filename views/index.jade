@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div#index-container.container
+        label= __("index.default.text")
+        div.btm-links
+            a(href='/login')#login= __("index.button-links.login")
+            label= __("index.button-links.or")
+            a(href='/signup')#create-account= __("index.button-links.createAccount")
+
+block scripts
+    script(src='/js/views/simplePage.js')

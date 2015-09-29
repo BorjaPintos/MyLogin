@@ -1,0 +1,23 @@
+
+extends layout
+
+block content
+    #information-container.container 
+        h3= __("information.text.header")
+        h4= __("information.text.part1")
+        h4= __("information.text.part2")
+        h4= __("information.text.part3")
+
+        div.media
+            div.media-right
+                a(href="https://es.linkedin.com/pub/borja-pintos-castro/a9/36a/67a")
+                    img.media-object(src="/img/LinkedIn_logo.png",width="64",height="64")
+            div.media-right
+                a(href="https://twitter.com/wakynian")
+                    img.media-object(src="/img/Twitter_logo.png",width="64",height="64")
+            div.media-right
+                a(href="https://github.com/borjapintos")
+                    img.media-object(src="/img/Git_logo.png",width="64",height="64")
+
+block scripts
+    script(src='/js/views/simplePage.js')

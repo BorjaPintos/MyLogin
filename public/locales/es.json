@@ -1,0 +1,124 @@
+{
+    "test" : "test",
+    "signup" : {
+        "header" : {
+            "title" : "Crear Usuario"
+        },
+        "button" : {
+            "signup" : "Crear",
+            "cancel" : "Cancelar"        
+        } 
+    },
+    "home" : {
+        "header" : {
+            "title" : "Datos de Usuario"
+        },
+        "button" : {
+            "delete" : "Borrar",
+            "update" : "Actualizar"        
+        } 
+    },
+    "comun" : {
+        "redirecting" : "Redireccionando...",
+        "unknown" : "Error desconocido :("
+    },
+    "validation" : {
+        "login" : {
+            "wrongUsername" : "Por favor, ponga un nombre de usuario válido.",
+            "wrongPassword" : "Por favor, ponga una contraseña válida."
+        },
+        "account" : {
+            "wrongName" : "El nombre debe ser mayor que 3 y menor que 255 caracteres.",
+            "wrongEmail" : "El email debe ser del tipo foo@foo.foo y menor que 255 caracteres.",
+            "wrongUsername" : "El nombre de usuario debe ser mayor que 3 y menor que 255 caracteres.",
+            "wrongPassword" : "La constraseña debe ser mayor que 6 y menor que 255 caracteres."
+        }
+    },
+    "error" : {
+        "code" : {
+            "401" : {
+                "login" : "Usuario o contraseña incorrectos.",
+                "updateUser" : "Contraseña incorrecta.",  
+                "deleteUser" : "Contraseña incorrecta."    
+            },
+            "404" : {
+                "updateUser" : "Usuario no encontrado.",  
+                "deleteUser" : "Usuario no encontrado."    
+            },
+            "407" : {
+                "updateUser" : "No estás logueado.",  
+                "deleteUser" : "No estás logueado."    
+            },
+            "409" : {
+                "1" : {
+                    "signup" : "El Email está siendo utilizado por otra persona."
+                },
+                "signup" : "El Usuario está siendo utilizado por otra persona.",
+                "updateUser" :  "El email ya está siendo utilizado por otra persona.",
+                "usernameVerification" : "El nombre de usuario ya está siendo utilizado por otra persona.",
+                "emailVerification" : "El email ya está siendo utilizado por otra persona."
+            },
+            "410" : {
+                "updateUser" : "No estás logueado",
+                "deleteUser" :  "No estás logueado"
+            },
+            "500" : {
+                "login" : "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda.",
+                "signup" : "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda.",
+                "updateUser" :  "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda."   
+            },
+            "503" : {
+                "login" : "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda.",
+                "signup" : "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda.",
+                "updateUser" : "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda."
+            },
+            "601" : {
+                "updateUser" : "El nombre debe ser mayor que 3 y menor que 255 caracteres.",
+                "signup" : "El nombre debe ser mayor que 3 y menor que 255 caracteres."
+            },
+            "602" : {
+                "updateUser" : "El nombre debe ser mayor que 3 y menor que 255 caracteres.",  
+                "signup" : "El nombre debe ser mayor que 3 y menor que 255 caracteres."    
+            },
+            "603" : {
+                "updateUser" : "El email debe ser del tipo foo@foo.foo y menor que 255 caracteres.",  
+                "signup" : "El email debe ser del tipo foo@foo.foo y menor que 255 caracteres."
+            },
+            "604" : {
+                "updateUser" : "El email debe ser del tipo foo@foo.foo y menor que 255 caracteres.",
+                "signup" : "El email debe ser del tipo foo@foo.foo y menor que 255 caracteres."
+            },
+            "605" : {
+                "updateUser" : "El nombre de usuario debe ser mayor que 3 y menor que 255 caracteres.",
+                "signup" : "El nombre de usuario debe ser mayor que 3 y menor que 255 caracteres."  
+            },
+            "606" : {
+                "updateUser" :"El nombre de usuario debe ser mayor que 3 y menor que 255 caracteres.", 
+                "signup" : "El nombre de usuario debe ser mayor que 3 y menor que 255 caracteres."   
+            },
+            "607" : {
+                "updateUser" : "La constraseña debe ser mayor que 6 y menor que 255 caracteres.",  
+                "signup" : "La constraseña debe ser mayor que 6 y menor que 255 caracteres."
+            },
+            "608" : {
+                "updateUser" : "La constraseña debe ser mayor que 6 y menor que 255 caracteres.",  
+                "signup" : "La constraseña debe ser mayor que 6 y menor que 255 caracteres."  
+            }
+        }
+    },
+    "success" : {
+        "code" : {
+            "200" :{
+                "logout" : "Deslogueado correctamente.",
+                "login" : "Logueado correctamente.",
+                "updateUser" : "Usuario actualizado correctamente.",
+                "deleteUser" : "Usuario borrado correctamente.",
+                "usernameVerification" : "El nombre está disponible.",
+                "emailVerification" : "El email está disponible."
+             },
+            "201" :{
+                "signup" : "Usuario creado correctamente"
+             }             
+         }    
+    }
+}
