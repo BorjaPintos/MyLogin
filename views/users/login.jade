@@ -1,6 +1,7 @@
 
 extends ../layout
 
+
 block content
     #login-container.container
         form( method="post")#login-form.well.span4
@@ -11,14 +12,16 @@ block content
             .form-group
                 label(for="password")= __("login.form.password")
                 input(type="password", name="password", id='pass-tf').form-control.required
-            button(type="submit")#btn-login.btn.btn-primary= __("login.button.primary")
+            .form-group
+                input(type="hidden", name="checkCode", id='checkCode-tf').form-control
+            button(type="button")#btn-login.btn.btn-primary= __("login.button.primary")
                 i.icon-lock.icon-white 
             div.btm-links
                 a(href='/signup')#create-account= __("login.button-link.createAccount")
 
-
 block scripts
     script(src='/js/views/login.js')
     script(src='/js/controllers/loginController.js')
+    script(src='/js/controllers/checkCodeOauth2Controller.js')
     script(src='/js/form-validators/loginValidator.js')
     script(src='/js/form-validators/emailValidator.js')

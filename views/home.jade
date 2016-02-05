@@ -3,6 +3,9 @@ extends layout
 
 block content
     include users/account
+    div#options-oauth2.container
+        button(type='button' data-toggle="modal" data-target="#oauth2-form-container")#oauth2Options.btn.btn-primary= __("oauth2.options")
+    include users/oauth2
 
 block scripts
     script(src='/js/views/home.js')

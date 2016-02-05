@@ -20,11 +20,16 @@ $(document).ready(function(){
             $('#account-form').fadeIn($.noop);
         }
     });
-$('account-form').hide();
+    $('account-form').hide();
+
+
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            $('#account-form').submit();
+        }
+    });
+   
     $('#account-form').ajaxForm({
-	    beforeSubmit : function(formData, jqForm, options){
-		    return av.validateForm();
-	    },
 	    success	: function(responseText, status, xhr, $form){
 		    if (status == 'success') window.location.href = '/home';
 	    },

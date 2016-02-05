@@ -5,7 +5,9 @@ var UserSchema = mongoose.Schema({
     firstName: String,
 	username: { type: String, index: {name : 'user_username_index',unique: true} },
 	password: String,
-	email: { type: String, index: {name : 'user_email_index', unique: true} }
+	email: { type: String, index: {name : 'user_email_index', unique: true} },
+    accountIdOauth2: String ,index: {name : 'user_accountIdOauth2_index', unique: true} },
+    typeOauth2: String
 });
 
 exports.User = mongoose.model('User', UserSchema);

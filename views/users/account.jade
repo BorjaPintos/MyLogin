@@ -21,9 +21,17 @@
             label.control-label(for='pass-tf')= __("account.form.password")
             input#pass-tf(type='password', name='password', value='').form-control
             span.glyphicon.form-control-feedback(aria-hidden='true')#passwordVerification
+        - if (user.username)
+            .form-group.has-feedback#new-password-fg
+                label.control-label(for='new-pass-tf')= __("account.form.newpassword")
+                input#new-pass-tf(type='password', name='new-password', value='').form-control
+                span.glyphicon.form-control-feedback(aria-hidden='true')#new-passwordVerification
+        .form-group.has-feedback
+            input#checkCode-tf(type='hidden', name='checkCode', value='').form-control
         .form-group#buttons-fg
                 button(type='button')#account-form-btn1.btn
-                button(type='submit')#account-form-btn2.btn
+                button(type='button')#account-form-btn2.btn
 
 script(src='/js/controllers/accountController.js')
+script(src='/js/controllers/checkCodeOauth2Controller.js')
 

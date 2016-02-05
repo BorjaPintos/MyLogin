@@ -108,13 +108,11 @@ function Message(){
     }
 
     this.addArray = function(div, array){
-        var ps = $('');
         for (var i = 0, total = array.length; i <total ; i++) {
             var p = $('<p></p>');
             p.text(this.getString(array[i]));
             div.append(p);
         }
-        //div.append(ps);
     }
 
     this.addString = function(div, string){

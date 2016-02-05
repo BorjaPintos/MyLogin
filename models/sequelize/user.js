@@ -37,10 +37,16 @@ exports.UserDefine = function(sequelize) {
                 isEmail: true
             }
           },
+          accountIdOauth2: {
+            type: Sequelize.STRING
+          },
+          typeOauth2: {
+            type: Sequelize.STRING
+          },
         },
         {
          indexes: [
-            // Create a unique index on '_id', 'username', 'email'
+            // Create a unique index on '_id', 'username', 'email', 'accountIdOauth2'
             {
               name:'user__id_index',
               unique: true,
@@ -55,6 +61,11 @@ exports.UserDefine = function(sequelize) {
               name:'user_email_index',
               unique: true,
               fields: ['email']
+            },
+            {
+              name:'user_accountIdOauth2_index',
+              unique: true,
+              fields: ['accountIdOauth2']
             }
         ]
         });

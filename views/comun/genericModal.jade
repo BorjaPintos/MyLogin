@@ -1,0 +1,12 @@
+#genericModal.modal.fade(role="dialog")
+    div.modal-dialog
+        div.modal-content
+            div.modal-header
+                button.close(data-dismiss='modal') &times;
+                h3#genericModalHeader
+            div.modal-body
+                #labels
+                input(type="text", name="answer", style="display: none;").form-control#genericModalInput
+            div.modal-footer
+                button(data-dismiss="modal").cancel.btn.btn-danger#genericModalButtonCancel= __("comun.cancel")
+                button.submit.btn.btn-primary#genericModalButtonOk= __("comun.accept")

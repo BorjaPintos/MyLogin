@@ -1,6 +1,5 @@
 
-function LoginController()
-{
+function LoginController(){
 
 
 

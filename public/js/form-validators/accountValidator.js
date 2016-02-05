@@ -3,9 +3,9 @@ function AccountValidator(){
 
 // build array maps of the form inputs & control groups //
     var messages = new Message();
-    this.formFieldsGroups = [$('#name-fg'), $('#email-fg'), $('#username-fg'), $('#password-fg')];
-	this.formFields = [$('#name-tf'), $('#email-tf'), $('#user-tf'), $('#pass-tf')];
-    this.formFieldsIcon = [$('#nameVerification'), $('#emailVerification'), $('#usernameVerification'), $('#passwordVerification')];
+    this.formFieldsGroups = [$('#name-fg'), $('#email-fg'), $('#username-fg'), $('#password-fg'), $('#new-password-fg')];
+	this.formFields = [$('#name-tf'), $('#email-tf'), $('#user-tf'), $('#pass-tf'), $('#new-pass-tf')];
+    this.formFieldsIcon = [$('#nameVerification'), $('#emailVerification'), $('#usernameVerification'), $('#passwordVerification'), $('#new-passwordVerification')];
     this.focusField = this.formFields[0];
 	
 // bind the form-error modal window to this controller to display any errors //
@@ -65,6 +65,7 @@ AccountValidator.prototype.validateForm = function(){
 	var e = [];
     this.focusField = null;
 
+    this.cleanValidations();
 
 	if (this.validateName(this.formFields[0].val()) == false) {
         this.verificationNotOk(this.formFieldsGroups[0], this.formFieldsIcon[0]);
@@ -99,6 +100,18 @@ AccountValidator.prototype.validateForm = function(){
         }
 	} else {
         this.verificationOk(this.formFieldsGroups[3], this.formFieldsIcon[3]);
+    }
+    //new password is optional
+    if (this.formFields[4].val()){
+	    if (this.validatePassword(this.formFields[4].val()) == false) {
+		    this.verificationNotOk(this.formFieldsGroups[4], this.formFieldsIcon[4]);
+		    e.push(i18n.t('validation.account.wrongNewPassword'));
+            if (this.focusField==null){
+                this.focusField=this.formFields[4];
+            }
+	    } else {
+            this.verificationOk(this.formFieldsGroups[4], this.formFieldsIcon[4]);
+        }
     }
 	if (e.length) this.showErrors(e,this.focusField);
 	return e.length === 0;

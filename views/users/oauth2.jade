@@ -1,0 +1,34 @@
+- user = typeof(userDetail) != 'undefined' ? userDetail : { }
+
+#oauth2-form-container.container.modal.fade(role="dialog")
+    form(method="post")#oauth2-form.well.span6
+        h1
+        .form-group#select-fg
+            - if (user.typeOauth2)
+                select#selectpicker-oauth2.selectpicker(data-width="80px" disabled="true")
+                    option(data-content="<img src='/img/"+ user.typeOauth2+".png'>" value= user.typeOauth2)
+            - else 
+                select#selectpicker-oauth2.selectpicker(data-width="80px")
+                    option.selected(data-content="<img src='/img/LATCH_ID.png'>" value='LATCH_ID')
+                    option(data-content="<img src='/img/AUTHY_ID.png'>" value='AUTHY_ID')
+        - if (!user.typeOauth2)
+            .form-group.has-feedback#oauth2-pairNumber-fg
+                label#oauth2-label-tf.control-fg= __("oauth2.form.pairNumber")
+                input#oauth2-pairNumber-input(type='text', name='pair code').form-control
+        .form-group.has-feedback#oauth2-userpaswword-fg
+            label.control-fg(for='oauth2-userpassword-label')= __("oauth2.form.userpassword")
+            input#oauth2-userpassword-input(type='password', name='userpasword').form-control
+        - if (user.typeOauth2)
+            .form-group#buttons-fg.col-md-10
+                button(type='button')#oauth2-form-unpair.btn.btn-danger= __("oauth2.form.unpair")
+        - else
+            .form-group#buttons-fg.col-md-10
+                button(type='button')#oauth2-form-pair.btn.btn-primary= __("oauth2.form.pair")
+        .button.close.col-md-2
+        button(type='button')#oauth2-close.btn.btn-default= __("comun.close")
+        div.note
+            label#aditional-note.small
+                
+
+script(src='/js/controllers/oauth2Controller.js')
+script(src='/js/form-validators/oauth2Validator.js')

@@ -1,6 +1,5 @@
 var userModule = require('../lib/internal/users/userModule'),
     passport = require('passport'),
-    initPassport = require('../lib/external/passport/init')(passport),
     i18nCustom = require('./i18nCustom');
 
 /**
@@ -90,7 +89,8 @@ exports.getHome = function(req, res){
     var userDetail = {
         username : req.user.username,
         email : req.user.email,
-        firstName : req.user.firstName,    
+        firstName : req.user.firstName,
+        typeOauth2 : req.user.typeOauth2 
     };
 	res.render('home', { languages : i18nCustom.getLanguagesAvaliables() , userDetail: userDetail});
 };
@@ -100,7 +100,7 @@ exports.getHome = function(req, res){
  */
 exports.updateUser = function(req, res, next) {
 
-    var errors = userModule.validateUserParams(req.param('firstName'), req.param('email'), req.param('username'), req.param('password'));
+    var errors = userModule.validateUserParams(req.param('firstName'), req.param('email'), req.param('username'), req.param('password'), req.param('new-password'));
     if (errors.length){
         res.send(errors,400); //it should be multiples erros
     } else {
@@ -188,6 +188,32 @@ exports.usernameVerification = function(req, res){
             }        
         }
     });
+};
+
+/**
+ * POST /userTypeOauth2
+ */
+exports.userTypeOauth2 = function(req, res){
+
+    var errors = userModule.validateUsername(req.param('username'));
+    if (errors.length){
+        res.send('409',409);   
+    } else {
+        userModule.userTypeOauth2(req.param('username'), function(err, typeOauth2, message){
+            if (err){
+                console.log(err);
+                res.send(500); //Internal Error
+            } else {
+                if (typeOauth2){
+                    res.send(typeOauth2,200);
+                } else {  
+                    res.send('409',409);   
+                }        
+            }
+        });
+    }
+    
+
 };
 
 

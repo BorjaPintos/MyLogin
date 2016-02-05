@@ -11,7 +11,7 @@ coming soon(mysql, mariaDB)
 
 ## Configuration
 
-We need configure 1 Environment variable:
+We need configure 1 Environment variable, and the SECRET API KEY from LATCH and AUTHY:
 
 # DATABASE_URL
 
@@ -34,6 +34,27 @@ If we want to use sqlite, wee need configure one more environment variable:
 DATABASE_STORAGE=<file>
 
 The default value is users.sqlite
+
+# SECRET API CONFIGURATION
+At the moment there are two types of second-factor authentication.
+LATCH(https://latch.elevenpaths.com/) and AUTHY(https://www.authy.com/)
+
+So we need to configurate the two secret api key.
+
+in /lib/external/passport/oauth2/latch   -> latch-config.js
+and /lib/external/passport/oauth2/authy  -> authy-config.js
+
+and complete the info wich we obtain from de provider
+
+for example:
+latch:
+    appId: 'MI-API-ID',
+    secretKey: 'MY-SECRET-KEY',
+
+authy:
+    appId: 'MI-API-ID',
+    url: 'http://sandbox-api.authy.com', //only sandbox
+
 
 ## Run aplication
 

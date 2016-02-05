@@ -1,11 +1,13 @@
 function ComunInit(){
 
-    var comunController = new ComunController();
-    var suportedLang = ['es', 'en'];
+    var comunController = new ComunController(),
+        suportedLang = ['es', 'en'];
+
     this.init = function (callback){
         i18n.init({
             resGetPath: 'locales/__lng__.json',
-            cookieName: 'locale'
+            cookieName: 'locale',
+            returnObjectTrees : true //con esto hace que la pantalla se ponga en blanco si hay un fallo en el servidor
         },
         function(err, t) {
             console.log(i18n.lng());

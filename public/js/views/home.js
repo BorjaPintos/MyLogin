@@ -15,31 +15,32 @@ $(document).ready(function(){
 	        $('#name-tf').focus();
 	        $('#user-tf').attr('disabled', 'disabled');
 	        $('#account-form h1').text(t('home.header.title'));
-	        $('#account-form-btn1').html(t('home.button.delete'));
+	        $('#account-form-btn1').text(t('home.button.delete'));
 	        $('#account-form-btn1').addClass('btn-danger');
-	        $('#account-form-btn2').html(t('home.button.update'));
+	        $('#account-form-btn2').text(t('home.button.update'));
             $('#account-form').fadeIn($.noop);
         }
     });
 
+
 	$('#account-form').ajaxForm({
 		beforeSubmit : function(formData, jqForm, options){
-			if (av.validateForm() == false){
-				return false;
-			} 	else{
-			// push the disabled username field onto the form data array //
-				formData.push({
-                    name:'username', 
-                    value:$('#user-tf').val(),
-                    type:'text',
-                    required: false
-                    });
-				return true;
-			}
+
+		    // push the disabled username field onto the form data array //
+			formData.push({
+                name:'username', 
+                value:$('#user-tf').val(),
+                type:'text',
+                required: false
+                });
+			return true;
+			
 		},
 		success	: function(responseText, status, xhr, $form){
 			if (status == 'success') {
-                messages.showSuccess(i18n.t('success.code.'+responseText+'.updateUser'), function(){$('#name-tf').focus()});
+                messages.showSuccess(i18n.t('success.code.'+responseText+'.updateUser'), function(){
+                    setTimeout(function(){window.location.href = '/home';});
+                });
             }
 		},
 		error : function(e){
@@ -102,8 +103,8 @@ $(document).ready(function(){
 
     this.addValidations = function(errors){
 
-        var formFieldsGroups = [$('#name-fg'), $('#email-fg'), $('#username-fg'), $('#password-fg')],
-            formFieldsIcon = [$('#nameVerification'), $('#emailVerification'), $('#usernameVerification'), $('#passwordVerification')],
+        var formFieldsGroups = [$('#name-fg'), $('#email-fg'), $('#username-fg'), $('#password-fg'), $('#new-password-fg')],
+            formFieldsIcon = [$('#nameVerification'), $('#emailVerification'), $('#usernameVerification'), $('#passwordVerification'), $('#newpasswordVerification')],
             errorIndex = [];
 
         if (errors.length){

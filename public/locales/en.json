@@ -31,6 +31,13 @@
             "wrongName" : "Name Should Be At Least 3 Characters and short than 255.",
             "wrongEmail" : "Please enter a valid email, foo@foo.foo and short than 255.",
             "wrongUsername" : "Username Should Be At Least 3 Characters and short than 255.",
+            "wrongPassword" : "Password Should Be At Least 6 Characters and short than 255.",
+            "wrongNewPassword" : "New Password Should Be At Least 6 Characters and short than 255."
+        },
+        "oauth2" : {
+            "wrongUsername" : "We can not get the username",
+            "wrongTypeOauth2" : "The type Oauht2 is necesary",
+            "wrongPairNumber" : "The pair number is necesary",
             "wrongPassword" : "Password Should Be At Least 6 Characters and short than 255."
         }
     },
@@ -39,11 +46,18 @@
             "401" : {
                 "login" : "Username or password wrong",
                 "updateUser" : "Password wrong.",  
-                "deleteUser" : "Password wrong."    
+                "deleteUser" : "Password wrong." ,
+                "oauth2Pair" : "Password wrong." ,
+                "oauth2UnPair" : "Password wrong."   
+            },
+            "402" : {
+                "oauth2Pair" : "We can not pair, the imput param is not valid."   
             },
             "404" : {
-                "updateUser" : "Usuario not found.",  
-                "deleteUser" : "Usuario not found."    
+                "updateUser" : "User not found.",  
+                "deleteUser" : "User not found.",
+                "oauth2Pair" : "User not found.",
+                "oauth2UnPair" : "User not found."    
             },
             "407" : {
                 "updateUser" : "You are not loged.",  
@@ -56,16 +70,35 @@
                 "signup" : "Username already taken.",
                 "updateUser" :  "Email already taken.",
                 "usernameVerification" : "Username already taken.",
-                "emailVerification" : "Email already taken."
+                "emailVerification" : "Email already taken.",
+                "oauth2Pair" : "User already have Oauth2.",
+                "oauth2UnPair" : "User do not have Oauth2"
             },
             "410" : {
                 "updateUser" : "You are not loged.",
-                "deleteUser" :  "You are not loged."
+                "deleteUser" :  "You are not loged.",
+                "oauth2Pair" : "You are not loged.",
+                "oauth2UnPair" : "You are not loged."
+            },
+            "412" : {
+                "updateUser" : "Missing parameters",
+                "login" : "Missing parameters",
+                "deleteUser" : "Missing parameters",
+                "oauth2Pair" : "Missing parameters",
+                "oauth2UnPair" : "Missing parameters"
+            },
+            "424" : {
+                "updateUser" : "Server Oauth2 not avaliable",
+                "login" : "Server Oauth2 not avaliable",
+                "deleteUser" : "Server Oauth2 not avaliable",
+                "oauth2Pair" : "Server Oauth2 not avaliable",
+                "oauth2UnPair" : "Server Oauth2 not avaliable"
             },
             "500" : {
                 "login" : "Unknown error, please contact with admin,thank you for your help.",
                 "signup" : "Unknown error, please contact with admin,thank you for your help.",
-                "updateUser" :  "Unknown error, please contact with admin,thank you for your help."   
+                "updateUser" :  "Unknown error, please contact with admin,thank you for your help.",
+                "oauth2Pair" : "Unknown error, service oauth2 not avaliable."   
             },
             "503" : {
                 "login" : "Unknown error, please contact with admin,thank you for your help.",
@@ -115,10 +148,27 @@
                 "deleteUser" : "User deleted Successfully",
                 "usernameVerification" : "Username avaliable",
                 "emailVerification" : "Email avaliable"
+
              },
             "201" :{
-                "signup" : "User created Successfully"
+                "signup" : "User created Successfully",
+                "oauth2Pair" : "Pair success.",
+                "oauth2UnPair" : "Unpair success."
              }             
          }    
+    },    
+    "checkCodeOaut2" : {
+        "header" : "Oaut2 Code",
+        "label" : "Enter your code provider Oauth2"
+    },
+    "oauth2Options" : {
+        "code": {
+            "LATCH_ID" : "Pair Code",
+            "AUTHY_ID" : "Phone Number"       
+         },
+        "confirm" : "Confirm info",
+        "email" : "Email: ",
+        "phone" : "Phone number: ",
+        "noSavePhone" : "The phone number will not save on database and their have no additional cost, we only use for pair your account with your app."
     }
 }

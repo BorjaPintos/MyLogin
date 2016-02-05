@@ -2,7 +2,7 @@
 function ComunController(){
 
     this.init = function () {
-        var messages = new Message();
+        var messages = new Message(),
             that = this;
 
         //NAVBAR
