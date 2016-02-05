@@ -5,9 +5,12 @@ npm install & npm install
 ## Avaliable Databases
 
 sqlite
+
 mongodb
+
 postgress
-coming soon(mysql, mariaDB)
+
+coming soon: (mysql, mariaDB)
 
 ## Configuration
 
