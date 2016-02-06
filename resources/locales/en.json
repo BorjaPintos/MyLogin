@@ -26,7 +26,7 @@
     "login.h1.title" : "Login",
     "login.form.username" : "Username",
     "login.form.password" : "Password",
-	"oauth2.form.checkCode": "Oaut2 Code",
+	"oauth2.form.checkCode": "2F Code",
     "login.button.primary" : "Sign In",
     "login.button-link.createAccount" : "Create an account",
     "account.form.name" : "Name",
@@ -37,6 +37,6 @@
 	"oauth2.form.pairNumber": "Pair number code",
 	"oauth2.form.unpair": "Unpair",
 	"oauth2.form.pair": "Pair",
-    "oauth2.options" : "Oauth2 options",
+    "oauth2.options" : "2F options",
     "oauth2.form.userpassword": "Password"
 }

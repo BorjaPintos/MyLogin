@@ -19,6 +19,7 @@ $(document).ready(function(){
 	        $('#account-form-btn1').addClass('btn-danger');
 	        $('#account-form-btn2').text(t('home.button.update'));
             $('#account-form').fadeIn($.noop);
+            $('#options-oauth2.container').fadeIn($.noop);
         }
     });
 

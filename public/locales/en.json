@@ -71,8 +71,8 @@
                 "updateUser" :  "Email already taken.",
                 "usernameVerification" : "Username already taken.",
                 "emailVerification" : "Email already taken.",
-                "oauth2Pair" : "User already have Oauth2.",
-                "oauth2UnPair" : "User do not have Oauth2"
+                "oauth2Pair" : "User already have 2F.",
+                "oauth2UnPair" : "User do not have 2F"
             },
             "410" : {
                 "updateUser" : "You are not loged.",
@@ -88,17 +88,17 @@
                 "oauth2UnPair" : "Missing parameters"
             },
             "424" : {
-                "updateUser" : "Server Oauth2 not avaliable",
-                "login" : "Server Oauth2 not avaliable",
-                "deleteUser" : "Server Oauth2 not avaliable",
-                "oauth2Pair" : "Server Oauth2 not avaliable",
-                "oauth2UnPair" : "Server Oauth2 not avaliable"
+                "updateUser" : "Server 2F not avaliable",
+                "login" : "Server 2F not avaliable",
+                "deleteUser" : "Server 2F not avaliable",
+                "oauth2Pair" : "Server 2F not avaliable",
+                "oauth2UnPair" : "Server 2F not avaliable"
             },
             "500" : {
                 "login" : "Unknown error, please contact with admin,thank you for your help.",
                 "signup" : "Unknown error, please contact with admin,thank you for your help.",
                 "updateUser" :  "Unknown error, please contact with admin,thank you for your help.",
-                "oauth2Pair" : "Unknown error, service oauth2 not avaliable."   
+                "oauth2Pair" : "Unknown error, service 2F not avaliable."   
             },
             "503" : {
                 "login" : "Unknown error, please contact with admin,thank you for your help.",
@@ -158,8 +158,8 @@
          }    
     },    
     "checkCodeOaut2" : {
-        "header" : "Oaut2 Code",
-        "label" : "Enter your code provider Oauth2"
+        "header" : "2F Code",
+        "label" : "Enter your code provider 2F"
     },
     "oauth2Options" : {
         "code": {

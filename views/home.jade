@@ -3,7 +3,7 @@ extends layout
 
 block content
     include users/account
-    div#options-oauth2.container
+    div#options-oauth2.container(style="display: none;")
         button(type='button' data-toggle="modal" data-target="#oauth2-form-container")#oauth2Options.btn.btn-primary= __("oauth2.options")
     include users/oauth2
 

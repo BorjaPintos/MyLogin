@@ -26,7 +26,7 @@
 	"login.h1.title": "Inicia Sesión",
 	"login.form.username": "Nombre de usuario",
 	"login.form.password": "Contraseña",
-	"oauth2.form.checkCode": "Codigo de Oaut2",
+	"oauth2.form.checkCode": "Codigo de 2F",
 	"login.button.primary": "Entrar",
 	"login.button-link.createAccount": "Crear una cuenta",
 	"account.form.name": "Nombre",
@@ -37,8 +37,8 @@
 	"oauth2.form.pairNumber": "Código de pareado",
 	"oauth2.form.unpair": "Desvincular",
 	"oauth2.form.pair": "Vincular",
-	"oauth2.options": "Opciones de Oauth2",
+	"oauth2.options": "Opciones de 2F",
 	"oauth2.form.userpassword": "Contraseña",
-	"oauth2.form.close": "oauth2.form.close"
+	"oauth2.form.close": "Cerrar"
 
 }

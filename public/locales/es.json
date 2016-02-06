@@ -36,7 +36,7 @@
         },
         "oauth2" : {
             "wrongUsername" : "Ocurrió un error al obtener el nombre de usuario",
-            "wrongTypeOauth2" : "El tipo de Oauth2 es obligatorio",
+            "wrongTypeOauth2" : "El tipo de 2F es obligatorio",
             "wrongPairNumber" : "El codigo de pareado es necesario",
             "wrongPassword" : "La contraseña debe ser mayor que 6 y menor que 255 caracteres."
         }
@@ -71,8 +71,8 @@
                 "updateUser" :  "El email ya está siendo utilizado por otra persona.",
                 "usernameVerification" : "El nombre de usuario ya está siendo utilizado por otra persona.",
                 "emailVerification" : "El email ya está siendo utilizado por otra persona.",
-                "oauth2Pair" : "El usuario ya tiene Oauth2.",
-                "oauth2UnPair" : "El usuario no tiene Oauth2"
+                "oauth2Pair" : "El usuario ya tiene 2F.",
+                "oauth2UnPair" : "El usuario no tiene 2F"
             },
             "410" : {
                 "updateUser" : "No estás logueado.",
@@ -88,11 +88,11 @@
                 "oauth2UnPair" : "Faltan datos para desvincular el dispositivo"
             },
             "424" : {
-                "updateUser" : "Problema de conexión con el servidor de Oauth2",
-                "login" : "Problema de conexión con el servidor de Oauth2",
-                "deleteUser" : "Problema de conexión con el servidor de Oauth2",
-                "oauth2Pair" : "Problema de conexión con el servidor de Oauth2",
-                "oauth2UnPair" : "Problema de conexión con el servidor de Oauth2"
+                "updateUser" : "Problema de conexión con el servidor de 2F",
+                "login" : "Problema de conexión con el servidor de 2F",
+                "deleteUser" : "Problema de conexión con el servidor de 2F",
+                "oauth2Pair" : "Problema de conexión con el servidor de 2F",
+                "oauth2UnPair" : "Problema de conexión con el servidor de 2F"
             },
             "500" : {
                 "login" : "Error desconocido, por favor, contacto con el administrador, gracias por su ayuda.",
@@ -159,8 +159,8 @@
          }    
     },
     "checkCodeOaut2" : {
-        "header" : "Código Oaut2",
-        "label" : "Introduzca el código de su proveedor de Oauth2"
+        "header" : "Código 2F",
+        "label" : "Introduzca el código de su proveedor de 2F"
     },
     "oauth2Options" : {
         "code": {
